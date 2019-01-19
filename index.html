@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC: Technical Documentation Page</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+</script>
+<div class="main-body">
+  <nav id="navbar">
+    <header>C++ Documentation</header>
+    <a href="#Intruduction" class="nav-link">Intruduction</a>
+    <a href="#History" class="nav-link">History</a>
+    <a href="#Compilers" class="nav-link">Compilers</a>
+    <a href="#Structure" class="nav-link">Structure</a>
+    <a href="#Variables" class="nav-link">Variables</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Intruduction">
+      <header>Intruduction</header>
+      <p><strong>A Brief Description</strong></p>
+      <hr>
+      <p><strong>Preface</strong></p>
+      <p>Computers are some of the most versatile tools that we have available. They are capable of performing stunning feats of computation, they allow information to be exchanged easily regardless of their physical location, they simplify many every-day
+        tasks, and they allow us to automate many processes that would be tedious or boring to perform otherwise. However, computers are not "intelligent" as we are. They have to be told in no uncertain terms exactly what they're supposed to do, and their
+        native languages are quite unlike anything we speak. Thus, there's a formidable language barrier between a person who wishes a computer to do something, and the computer that typically requires instructions in its native language, machine code,
+        to do anything. So far, computers cannot figure out what they are supposed to do on their own, and thus they rely on programs which we create, which are sets of instructions that the computer can understand and follow.</p>
+      <p><strong>An Overview of Programs and Programming Languages</strong></p>
+      <p>In order to better communicate to our computers what exactly it is we want them to do, we've developed a wide range of programming languages to make the communication process easier. </p>
+      <p>Depending on the type of project, there are many factors that have to be considered when choosing a language. Here is a list of some of the more noteworthy ones: </p>
+      <p>
+        <ul>
+          <li><u>Compiled, interpreted, or JIT-compiled </u>
+            <strong>Compiled languages</strong> are translated to the target machine's native language by a program called a compiler. This can result in very fast code, especially if the compiler is effective at optimizing, however the resulting code
+            may not port well across operating systems and the compilation process may take a while.
+            <strong>Interpreted languages</strong> are read by a program called an interpreter and are executed by that program. While they are as portable as their interpreter and have no long compile times, interpreted languages are usually much slower
+            than an equivalent compiled program. Finally, <strong>just-in-time compiled</strong> (or JIT-compiled) languages are languages that are quickly compiled when programs written in them need to be run (usually with very little optimization),
+            offering a balance between performance and portability. </li><br>
+          <li><u>High or Low Level Level</u>, in this case, refers to how much the nature of the language reflects the underlying system. In other words, a programming language's level refers to how similar the language is to a computer's native language.
+            The higher the level, the less similar it is. A low-level language is generally quite similar to machine code, and thus is more suitable for programs like device drivers or very high performance programs that really need access to the hardware.
+            Generally, the term is reserved for machine code itself and assembly languages, though many languages offer low-level elements. Since a low-level language is subject to all the nuances of the hardware it's accessing, however, a program written
+            in a low-level language is generally difficult to port to other platforms. Low level languages are practically never interpreted, as this generally defeats the purpose. A high-level language focuses more on concepts that are easy to understand
+            by the human mind, such as objects or mathematical functions. A high-level language usually is easier to understand than a low-level language, and it usually takes less time to develop a program in a high-level language than it does in a low-level
+            language. As a trade-off one generally needs to sacrifice some degree of control over what the resulting program actually does. It is not, however, impossible to mix high-level and low-level functionality in a language. </li>
+        </ul>
+      </p>
+      <p><strong>Type System</strong><br> A type system refers to the rules that the different types of variables of a language have to follow. Some languages (including most assembly languages) do not have types and thus this section does not apply to them.
+        However, as most languages (including C++) have types, this information is important.</p>
+      <ul>
+        <li><strong>Type Strength: Strong or Weak</strong><br> A strong typing system puts restrictions on how different types of variables can be converted to each other without any converting statements. An ideal strong typing system would forbid implicit
+          "casts" to types that do not make any sense, such as an integer to a Fruit object. A weak typing system would try to find some way to make the cast work. </li><br>
+        <li><strong>Type Expression: Manifest or Inferred</strong><br> This deals with how the compiler/interpreter for a language infers the types of variables. Many languages require variables' types to be explicitly defined, and thus rely on manifest typing.
+          Some however, will infer the type of the variable based on the contexts in which it is used, and thus use inferred typing. </li><br>
+        <li><strong>Type Checking: Static or Dynamic </strong><br> If a language is statically typed, then the compiler/interpreter does the type checking once before the program runs/is compiled. If the language is dynamically type checked, then the types
+          are checked at run-time.</li><br>
+        <li><strong>Type Safety: Safe or Unsafe </strong><br> These refer to the degree to which a language will prohibit operations on typed variables that might lead to undefined behavior or errors. A safe language will do more to ensure that such operations
+          or conversions do not occur, while an unsafe language will give more responsibility to the user in this regard.</li>
+      </ul>
+      <p><i>These typing characteristics are not necessarily mutually exclusive, and some languages mix them. </i></p>
+      <p><u>Supported paradigms</u></p>
+      <p>A programming paradigm is a methodology or way of programming that a programming language supports. Here is a summary of a few common paradigms:</p>
+      <ul>
+        <li><strong>Declarative</strong><br> A declarative language will focus more on specifying what a language is supposed to accomplish rather than by what means it is supposed to accomplish it. Such a paradigm might be used to avoid undesired side-effects
+          resulting from having to write one's own code. </li><br>
+        <li><strong>Functional</strong><br> Functional programming is a subset of declarative programming that tries to express problems in terms of mathematical equations and functions. It goes out of its way to avoid the concepts of states and mutable variables
+          which are common in imperative languages.</li><br>
+        <li><strong>Generic </strong><br> Generic programming focuses on writing skeleton algorithms in terms of types that will be specified when the algorithm is actually used, thus allowing some leniency to programmers who wish to avoid strict strong typing
+          rules. It can be a very powerful paradigm if well-implemented.</li><br>
+        <li><strong>Imperative</strong><br> Imperative languages allow programmers to give the computer ordered lists of instructions without necessarily having to explicitly state the task. It can be thought of being the opposite of declarative programming.</li><br>
+        <li><strong>Structured</strong><br> Structured programming languages aim to provide some form of noteworthy structure to a language, such as intuitive control over the order in which statements are executed (if X then do Y otherwise do Z, do X while
+          Y is Z). Such languages generally deprecate "jumps", such as those provided by the goto statement in C and C++.</li><br>
+        <li><strong>Procedural </strong><br> Although it is sometimes used as a synonym for imperative programming, a procedural programming language can also refer to an imperative structured programming language which supports the concept of procedures
+          and subroutines (also known as functions in C or C++). </li><br>
+        <li><strong>Object-Oriented</strong><br> Object-Oriented programming (sometimes abbreviated to OOP) is a subset of structured programming which expresses programs in the terms of "objects", which are meant to model objects in the real world. Such
+          a paradigm allows code to be reused in remarkable ways and is meant to be easy to understand.</li>
+      </ul>
+      <p><u>Standardization</u><br> Does a language have a formal standard? This can be very important to ensure that programs written to work with one compiler/interpreter will work with another. Some languages are standardized by the American National
+        Standards Institute (ANSI), some are standardized by the International Organization for Standardization (ISO), and some have an informal but de-facto standard not maintained by any standards organization.</p>
+    </section>
+    <section class="main-section" id="History">
+      <header>History</header>
+      <p><strong>History of C++</strong></p>
+      <hr>
+      <p>The C++ programming language has a history going back to 1979, when<a href="http://www2.research.att.com/~bs/" target="_blank"> Bjarne Stroustrup</a> was doing work for his Ph.D. thesis. One of the languages Stroustrup had the opportunity to work
+        with was a language called Simula, which as the name implies is a language primarily designed for simulations.<a href="http://staff.um.edu.mt/jskl1/talk.html" target="_blank"> The Simula 67 language </a>- which was the variant that Stroustrup
+        worked with - is regarded as the first language to support the object-oriented programming paradigm. Stroustrup found that this paradigm was very useful for software development, however the Simula language was far too slow for practical use.<br><br>        Shortly thereafter, he began work on "C with Classes", which as the name implies was meant to be a superset of the C language. His goal was to add object-oriented programming into the C language, which was and still is a language well-respected
+        for its portability without sacrificing speed or low-level functionality. His language included classes, basic<a href="http://www.cplusplus.com/doc/tutorial/functions2/#inline" target="_blank"> inheritance, inlining, default function arguments,</a>        and strong type checking in addition to all the features of the C language.<br><br> The first C with Classes compiler was called Cfront, which was derived from a C compiler called CPre. It was a program designed to translate C with Classes code
+        to ordinary C. A rather interesting point worth noting is that Cfront was written mostly in C with Classes, making it a self-hosting compiler (a compiler that can compile itself). Cfront would later be abandoned in 1993 after it became difficult
+        to integrate new features into it, namely C++ exceptions. Nonetheless, Cfront made a huge impact on the implementations of future compilers and on the Unix operating system.<br><br> In 1983, the name of the language was changed from C with Classes
+        to C++. The ++ operator in the C language is an operator for incrementing a variable, which gives some insight into how Stroustrup regarded the language. Many new features were added around this time, the most notable of which are virtual functions,
+        function overloading, references with the & symbol, the const keyword, and single-line comments using two forward slashes (which is a feature taken from the language BCPL).<br><br> In 1985, Stroustrup's reference to the language entitled The C++
+        Programming Language was published. That same year, C++ was implemented as a commercial product. The language was not officially standardized yet, making the book a very important reference. The language was updated again in 1989 to include protected
+        and static members, as well as inheritance from several classes.<br><br> In 1990, The Annotated C++ Reference Manual was released. The same year, Borland's Turbo C++ compiler would be released as a commercial product. Turbo C++ added a plethora
+        of additional libraries which would have a considerable impact on C++'s development. Although Turbo C++'s last stable release was in 2006, the compiler is still widely used.<br><br> In 1998, the C++ standards committee published the first international
+        standard for C++ ISO/IEC 14882:1998, which would be informally known as C++98. The Annotated C++ Reference Manual was said to be a large influence in the development of the standard.<a href="http://www.cplusplus.com/reference/stl/" target="_blank"> The Standard Template Library</a>,
+        which began its conceptual development in 1979, was also included. In 2003, the committee responded to multiple problems that were reported with their 1998 standard, and revised it accordingly. The changed language was dubbed C++03.<br><br> In
+        2005, the C++ standards committee released a technical report (dubbed TR1) detailing various features they were planning to add to the latest C++ standard. The new standard was informally dubbed C++0x as it was expected to be released sometime
+        before the end of the first decade. Ironically, however, the new standard would not be released until mid-2011. Several technical reports were released up until then, and some compilers began adding experimental support for the new features.<br><br>        In mid-2011, the new C++ standard (dubbed C++11) was finished. The Boost library project made a considerable impact on the new standard, and some of the new modules were derived directly from the corresponding Boost libraries. Some of the new
+        features included regular expression support (details on regular expressions may be found here), a comprehensive randomization library, a new C++ time library, atomics support, a standard threading library (which up until 2011 both C and C++ were
+        lacking), a new for loop syntax providing functionality similar to foreach loops in certain other languages, the auto keyword, new container classes, better support for unions and array-initialization lists, and variadic templates.<br><br> Written
+        by <a href="http://www.cplusplus.com/user/N17f92yv/" target="_blank"> Albatross.</a></p>
+    </section>
+    <section class="main-section" id="Compilers">
+      <header>Compilers</header>
+      <p><strong>What is a Compiler</strong></p>
+      <hr>
+      <p>The essential tools needed to follow these tutorials are a computer and a compiler toolchain able to compile C++ code and build the programs to run on it.<br><br> C++ is a language that has evolved much over the years, and these tutorials explain
+        many features added recently to the language. Therefore, in order to properly follow the tutorials, a recent compiler is needed. It shall support (even if only partially) the features introduced by the 2011 standard.<br><br> Many compiler vendors
+        support the new features at different degrees. See the bottom of this page for some compilers that are known to support the features needed. Some of them are free!<br><br> If for some reason, you need to use some older compiler, you can access
+        an older version of these tutorials here (no longer updated).</p>
+
+      <p><strong>What is a compiler?</strong>
+        <hr> Computers understand only one language and that language consists of sets of instructions made of ones and zeros. This computer language is appropriately called machine language.</p>
+
+      <p>A single instruction to a computer could look like this: <br>
+        <table class="boxed">
+          <tbody>
+            <tr>
+              <td>00000</td>
+              <td>10011110</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          As you can imagine, programming a computer directly in machine language using only ones and zeros is very tedious and error prone. To make programming easier, high level languages have been developed. High level programs also make it easier for programmers
+          to inspect and understand each other's programs easier.
+          <br> This is a portion of code written in C++ that accomplishes the exact same purpose:<br><br>
+          <code>
+			int a, b, sum;<br>
+			cin >> a;<br>
+			cin >> b;<br>
+			sum = a + b;<br>
+			cout << sum << endl;
+		</code>
+        </p>
+        <p>
+          Even if you cannot really understand the code above, you should be able to appreciate how much easier it will be to program in the C++ language as opposed to machine language.
+          <br><br> Because a computer can only understand machine language and humans wish to write in high level languages high level languages have to be re-written (translated) into machine language at some point. This is done by special programs called
+          compilers, interpreters, or assemblers that are built into the various programming applications.
+          <br><br> C++ is designed to be a compiled language, meaning that it is generally translated into machine language that can be understood directly by the system, making the generated program highly efficient. For that, a set of tools are needed,
+          known as the development toolchain, whose core are a compiler and its linker.<br><br>
+        </p>
+    </section>
+    <section class="main-section" id="Structure">
+      <header>Structure</header>
+      <p><strong>Structure of a program</strong>
+        <hr> The best way to learn a programming language is by writing programs. Typically, the first program beginners write is a program called "Hello World", which simply prints "Hello World" to your computer screen. Although it is very simple, it contains
+        all the fundamental components C++ programs have:</p>
+      <code>
+		// my first program in C++
+		#include <iostream><br>
+
+		int main()<br>
+		{<br>
+		  std::cout << "Hello World!";<br>
+		}
+	</code>
+      <code>
+		Hello World!
+	</code>
+      <p>
+        The left panel above shows the C++ code for this program. The right panel shows the result when the program is executed by a computer. The grey numbers to the left of the panels are line numbers to make discussing programs and researching errors easier.
+        They are not part of the program.<br><br> Let's examine this program line by line:<br><br> Line 1: // my first program in C++ Two slash signs indicate that the rest of the line is a comment inserted by the programmer but which has no effect
+        on the behavior of the program. Programmers use them to include short explanations or observations concerning the code or program. In this case, it is a brief introductory description of the program.<br><br> Line 2: #include &lt;iostream&gt; Lines
+        beginning with a hash sign (#) are directives read and interpreted by what is known as the preprocessor. They are special lines interpreted before the compilation of the program itself begins. In this case, the directive #include &lt;iostream&gt;,
+        instructs the preprocessor to include a section of standard C++ code, known as header iostream, that allows to perform standard input and output operations, such as writing the output of this program (Hello World) to the screen.<br><br> Line 3:
+        A blank line. Blank lines have no effect on a program. They simply improve readability of the code.
+        <br><br> Line 4: int main () This line initiates the declaration of a function. Essentially, a function is a group of code statements which are given a name: in this case, this gives the name "main" to the group of code statements that follow.
+        Functions will be discussed in detail in a later chapter, but essentially, their definition is introduced with a succession of a type (int), a name (main) and a pair of parentheses (()), optionally including parameters.
+        <br><br> The function named main is a special function in all C++ programs; it is the function called when the program is run. The execution of all C++ programs begins with the main function, regardless of where the function is actually located
+        within the code.
+        <br><br> Lines 5 and 7: { and } The open brace ({) at line 5 indicates the beginning of main's function definition, and the closing brace (}) at line 7, indicates its end. Everything between these braces is the function's body that defines what
+        happens when main is called. All functions use braces to indicate the beginning and end of their definitions.
+        <br><br> Line 6: std::cout
+        << "Hello World!"; This line is a C++ statement. A statement is an expression that can actually produce some effect. It is the meat of a program, specifying its actual behavior. Statements are executed in the same order
+          that they appear within a function 's body.
+				<br><br>
+			This statement has three parts: First, std::cout, which identifies the standard character output device (usually, this is the computer screen). Second, the insertion operator (<<), which indicates that what follows is inserted into std::cout. Finally, a sentence within quotes ("Hello world!"), is the content inserted into the standard output.
+				<br><br>
+			Notice that the statement ends with a semicolon (;). This character marks the end of the statement, just as the period ends a sentence in English. All C++ statements must end with a semicolon character. One of the most common syntax errors in C++ is forgetting to end a statement with a semicolon.
+				<br><br>
+			You may have noticed that not all the lines of this program perform actions when the code is executed. There is a line containing a comment (beginning with //). There is a line with a directive for the preprocessor (beginning with #). There is a line that defines a function (in this case, the main function). And, finally, a line with a statements ending with a semicolon (the insertion into cout), which was within the block delimited by the braces ( { } ) of the main function. 
+				<br><br>
+			The program has been structured in different lines and properly indented, in order to make it easier to understand for the humans reading it. But C++ does not have strict rules on indentation or on how to split instructions in different lines. For example, instead of 
+			<code>
+				int main ()<br>
+				{<br>
+				  std::cout << " Hello World!";<br>
+				}
+			</code>
+				We could have written:
+			<code>
+				int main () { std::cout << "Hello World!"; }
+			</code>
+		</p>
+</section>
+<section class="main-section" id="Variables">
+	<header>Variables</header>
+	<p><strong>Variables and types</strong></p><hr>
+	<p>
+		The usefulness of the "Hello World" programs shown in the previous chapter is rather questionable. We had to write several lines of code, compile them, and then execute the resulting program, just to obtain the result of a simple sentence written on the screen. It certainly would have been much faster to type the output sentence ourselves.
+			<br><br>
+		However, programming is not limited only to printing simple texts on the screen. In order to go a little further on and to become able to write programs that perform useful tasks that really save us work, we need to introduce the concept of variables.
+			<br><br>
+		Let's imagine that I ask you to remember the number 5, and then I ask you to also memorize the number 2 at the same time. You have just stored two different values in your memory (5 and 2). Now, if I ask you to add 1 to the first number I said, you
+          should be retaining the numbers 6 (that is 5+1) and 2 in your memory. Then we could, for example, subtract these values and obtain 4 as result. <br><br> The whole process described above is a simile of what a computer can do with two variables. The same process can be expressed in C++ with the following set of statements:
+          <code>
+			a = 5;<br>
+			b = 2;<br>
+			a = a + 1;<br>
+			result = a - b;
+		</code> Obviously, this is a very simple example, since we have only used two small integer values, but consider that your computer can store millions of numbers like these at the same time and conduct sophisticated mathematical operations
+          with them.
+          <br><br> We can now define variable as a portion of memory to store a value.
+          <br><br> Each variable needs a name that identifies it and distinguishes it from the others. For example, in the previous code the variable names were a, b, and result, but we could have called the variables any names we could have come up with,
+          as long as they were valid C++ identifiers.
+      </p>
+    </section>
+  </main>
+</div>
+  
+  
+
+</body>
+
+</html>
